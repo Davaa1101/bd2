@@ -123,7 +123,5 @@ public class Daalgavar2{
 			for (int i =0; i<16 ;i++) {
 				System.out.print(" "+Work_days1[i]);
 			}
- 			
-			//
 		}
 }
