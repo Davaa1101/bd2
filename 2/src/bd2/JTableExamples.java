@@ -23,6 +23,8 @@ public class JTableExamples {
         obj.setWorkdays();
         int[] _1978 = new int[15];
         int[] _2006 = new int [16];
+        int dadlaga1=(8+8+8+8+8+6)*8*60;
+        int dadlaga2=(8+8+8+8+8)*8*60;
         int count = 0, count1 = 0, counter = 0, counter1 = 0;
  for (int i = 0; i < 15; i++) {
 	 if (i>=0 && i<3) {
@@ -67,8 +69,8 @@ public class JTableExamples {
  for (int i = 0; i<12 ; i++) {
 	 num1 += obj.sonirhson2(i);
  }
- int ihsur1_dad = 22080*5;
- int ihsur2_dad = 19200*4;
+ int ihsur1_dad = dadlaga1*5;
+ int ihsur2_dad = dadlaga2*4;
         // Data to be displayed in the JTable
         String[][] data = {
             {"1978","бага анги",""+String.valueOf(obj.getWorkDays(0)),"24","45",""+_1978[0],""+obj.getWeeks(0), ""+obj.sonirhson1(0),""},
@@ -81,11 +83,11 @@ public class JTableExamples {
             {"1985","дунд анги",""+String.valueOf(obj.getWorkDays(7)),"34","45",""+_1978[7],""+obj.getWeeks(7), ""+obj.sonirhson1(7),""},
             {"1986","ахлах анги",""+String.valueOf(obj.getWorkDays(8)),"36","45",""+_1978[8],""+obj.getWeeks(8), ""+obj.sonirhson1(8),""},
             {"1987","ахлах анги",""+String.valueOf(obj.getWorkDays(9)),"36","45",""+_1978[9],""+obj.getWeeks(9), ""+obj.sonirhson1(9),""},
-            {"1988","дээд сургууль",""+String.valueOf(obj.getWorkDays(10)),"18","90",""+_1978[10],""+obj.getWeeks(10),"", "22080"},
-            {"1989","дээд сургууль",""+String.valueOf(obj.getWorkDays(11)),"18","90",""+_1978[11],""+obj.getWeeks(11),"", "22080"},
-            {"1990","дээд сургууль",""+String.valueOf(obj.getWorkDays(12)),"18","90",""+_1978[12],""+obj.getWeeks(12),"", "22080"},
-            {"1991","дээд сургууль",""+String.valueOf(obj.getWorkDays(13)),"18","90",""+_1978[13],""+obj.getWeeks(13),"", "22080"},
-            {"1992","дээд сургууль",""+String.valueOf(obj.getWorkDays(14)),"18","90",""+_1978[14],""+obj.getWeeks(14),"", "22080"},  
+            {"1988","дээд сургууль",""+String.valueOf(obj.getWorkDays(10)),"18","90",""+_1978[10],""+obj.getWeeks(10),"", ""+dadlaga1},
+            {"1989","дээд сургууль",""+String.valueOf(obj.getWorkDays(11)),"18","90",""+_1978[11],""+obj.getWeeks(11),"", ""+dadlaga1},
+            {"1990","дээд сургууль",""+String.valueOf(obj.getWorkDays(12)),"18","90",""+_1978[12],""+obj.getWeeks(12),"", ""+dadlaga1},
+            {"1991","дээд сургууль",""+String.valueOf(obj.getWorkDays(13)),"18","90",""+_1978[13],""+obj.getWeeks(13),"", ""+dadlaga1},
+            {"1992","дээд сургууль",""+String.valueOf(obj.getWorkDays(14)),"18","90",""+_1978[14],""+obj.getWeeks(14),"", ""+dadlaga1},  
             {"2006","бага анги",""+String.valueOf(obj.getWorkDays1(0)),"20","30",""+_2006[0],""+obj.getWeeks(0), ""+obj.sonirhson2(0),""},
             {"2007","бага анги",""+String.valueOf(obj.getWorkDays1(1)),"20","30",""+_2006[1],""+obj.getWeeks(1), ""+obj.sonirhson2(1),""},
             {"2008","бага анги",""+String.valueOf(obj.getWorkDays1(2)),"20","30",""+_2006[2],""+obj.getWeeks(2), ""+obj.sonirhson2(2),""},
@@ -98,10 +100,10 @@ public class JTableExamples {
             {"2015","ахлах анги",""+String.valueOf(obj.getWorkDays1(9)),"30","35",""+_2006[9],""+obj.getWeeks(9), ""+obj.sonirhson2(9),""},
             {"2016","ахлах анги",""+String.valueOf(obj.getWorkDays1(10)),"30","35",""+_2006[10],""+obj.getWeeks(10), ""+obj.sonirhson2(10),""},
             {"2017","ахлах анги",""+String.valueOf(obj.getWorkDays1(11)),"30","35",""+_2006[11],""+obj.getWeeks(11), ""+obj.sonirhson2(11),""},
-            {"2018","дээд сургууль",""+String.valueOf(obj.getWorkDays1(12)),"15","90",""+_2006[12],""+obj.getWeeks(12),"", "19200"},
-            {"2019","дээд сургууль",""+String.valueOf(obj.getWorkDays1(13)),"15","90",""+_2006[13],""+obj.getWeeks(13),"", "19200"},
-            {"2020","дээд сургууль",""+String.valueOf(obj.getWorkDays1(14)),"15","90",""+_2006[14],""+obj.getWeeks(14),"", "19200"},
-            {"2021","дээд сургууль",""+String.valueOf(obj.getWorkDays1(15)),"15","90",""+_2006[15],""+obj.getWeeks(15),"", "19200"},
+            {"2018","дээд сургууль",""+String.valueOf(obj.getWorkDays1(12)),"15","90",""+_2006[12],""+obj.getWeeks(12),"", ""+dadlaga2},
+            {"2019","дээд сургууль",""+String.valueOf(obj.getWorkDays1(13)),"15","90",""+_2006[13],""+obj.getWeeks(13),"", ""+dadlaga2},
+            {"2020","дээд сургууль",""+String.valueOf(obj.getWorkDays1(14)),"15","90",""+_2006[14],""+obj.getWeeks(14),"", ""+dadlaga2},
+            {"2021","дээд сургууль",""+String.valueOf(obj.getWorkDays1(15)),"15","90",""+_2006[15],""+obj.getWeeks(15),"", ""+dadlaga2},
             {"1р тохиолдолд дунд сургууль","1р тохиолдолд дээд сургууль","2р тохиолдолд дунд сургууль","2р тохиолдолд дээд сургууль","1р харьцаа","2р харьцаа","", "",""},
             {""+count,""+count1,""+counter,""+counter1,""+String.valueOf(haritsaa),""+String.valueOf(haritsaa1),"", "",""},
             {"1р тохиолдолд сонирхсон","2р тохиолдолд сонирхсон","Харьцаа","1р тохиолдолд нийт дадлага","2р тохиолдолд нийт дадлага/Дээд сургуульд сурсан хугацаа","2р тохиолдолд нийт дадлага", "2р тохиолдолд нийт дадлага/Дээд сургуульд сурсан хугацаа","",""},

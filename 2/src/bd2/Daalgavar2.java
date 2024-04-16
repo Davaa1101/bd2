@@ -26,18 +26,41 @@ public class Daalgavar2{
 			return Weeks[i];
 		}
 		public void setWeeks() {
-			 for (int i = 1978 ; i<1994; i++) {
-				 LocalDate date1 = LocalDate.of(i, 9, 1);
-				 Weeks[i-1978] = 38;
-				 if(date1.getDayOfWeek() == DayOfWeek.MONDAY) {
-					 Weeks[i-1978] = 39 ;
-				 }
-				 else if(date1.getDayOfWeek() == DayOfWeek.SUNDAY) {
-					 if(i%4==0) {
-						 Weeks[i-1978] = 39 ;
-					 }
-				 }
-			 }
+			for(int i = 1978; i<1994 ; i++){
+			    LocalDate date1 = LocalDate.of(i, 9, 1);
+				LocalDate date2 = LocalDate.of(i+1, 5, 31);
+			    LocalDate currentDate = date1 ; 
+			    int counter = 0, count = 0 ;
+			    while (!currentDate.isAfter(date2)){
+			        if (currentDate.getDayOfWeek() == DayOfWeek.MONDAY) {
+					                count++;
+					            }
+					            else if (currentDate.getDayOfWeek() == DayOfWeek.TUESDAY) {
+					                count++;
+					            }
+					            else if (currentDate.getDayOfWeek() == DayOfWeek.WEDNESDAY) {
+					                count++;
+					            }
+					            else if (currentDate.getDayOfWeek() == DayOfWeek.THURSDAY) {
+					                count++;
+					            }
+					            else if (currentDate.getDayOfWeek() == DayOfWeek.FRIDAY) {
+					                count++;
+					            }
+			                     else if (currentDate.getDayOfWeek() == DayOfWeek.SATURDAY) {
+					                count++;
+					            }
+			                    else if (currentDate.getDayOfWeek() == DayOfWeek.SUNDAY) {
+					                count++;
+			                        if(count == 7){
+			                            counter++ ;
+			                        }
+			                            count = 0;
+					            }
+			    currentDate = currentDate.plus(1, ChronoUnit.DAYS);
+			    }
+					  Weeks[i-1978] = counter;      
+			}
 		}
 		public void setWorkdays() {
 			for (int i = 1978 ; i<1994; i++) {
@@ -99,7 +122,7 @@ public class Daalgavar2{
 
 	    public static double dund2_612(int i) {
 	        return togsoh910_612 * Work_days1[i] * dund2_neg_tsag_612;
-	    }
+	    }   
 
 	    public static double ih2(int i) {
 	        return deed1 * (Work_days1[i]-40) * deed_neg_tsag;
@@ -120,8 +143,5 @@ public class Daalgavar2{
 			Daalgavar2 daalgavar = new Daalgavar2();
 			daalgavar.setWeeks();
 			daalgavar.setWorkdays();
-			for (int i =0; i<16 ;i++) {
-				System.out.print(" "+Work_days1[i]);
-			}
 		}
 }
